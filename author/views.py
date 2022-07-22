@@ -18,6 +18,12 @@ class AuthorDetailView(generics.RetrieveAPIView):
     serializer_class = AuthorDetailSerializer
     lookup_field = 'id'
 
+class AuthorDetailView(generics.CreateAPIView):
+    queryset = ContantUs.objects.all()
+    serializer_class = Contactus
+
+
+
 
 class AuthorPostsView(generics.ListAPIView):
     queryset = Post.objects.all()
